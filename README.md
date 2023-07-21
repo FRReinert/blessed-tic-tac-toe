@@ -5,11 +5,15 @@ This is a simple Tic Tac Toe game implemented in TypeScript that runs in the ter
 
 ## Installation
 You can install the game globally using npm with the following command:
-```npm install -G https://github.com/FRReinert/blessed-tic-tac-toe```
+```sh
+npm install -G https://github.com/FRReinert/blessed-tic-tac-toe
+```
 
 ## Usage
 Once the game is installed, you can run it using the following command:
-```npx tictactoe```
+```sh
+npx tictactoe
+```
 
 ## How to Play
 The game is played on a 3x3 grid. Players take turns to place their symbol ('X' or 'O') in an empty cell. The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins the game. If all cells are filled and no player has three symbols in a row, the game ends in a draw.
