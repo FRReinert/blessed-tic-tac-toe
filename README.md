@@ -6,7 +6,7 @@ This is a simple Tic Tac Toe game implemented in TypeScript that runs in the ter
 ## Installation
 You can install the game globally using npm with the following command:
 ```sh
-npm install -G https://github.com/FRReinert/blessed-tic-tac-toe
+npm install -g https://github.com/FRReinert/blessed-tic-tac-toe
 ```
 
 ## Usage
