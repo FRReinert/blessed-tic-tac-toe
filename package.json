@@ -2,13 +2,9 @@
   "name": "blessed-tic-tac-toe",
   "version": "1.0.0",
   "description": "Tic Tac Toe game for Terminal",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "preinstall": "npm run build",
-    "build": "tsc"
-  },
-  "bin": {
-    "tictactoe": "./dist/index.js"
+    "start": "tsc && node dist/index.js"
   },
   "author": "Fabricio Roberto Reinert",
   "license": "MIT",
