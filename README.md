@@ -1,26 +1,25 @@
 # Tic Tac Toe Terminal Game
-![image](https://github.com/FRReinert/blessed-tic-tac-toe/assets/25513355/1828460b-fe8c-4792-ba17-90585839b3fa)
+![image](https://github.com/FRReinert/blessed-tic-tac-toe/assets/25513355/60b54370-d765-420e-badc-947e732a80d2)
+
 
 This is a simple Tic Tac Toe game implemented in TypeScript that runs in the terminal. Challenge your friends to a classic game of Tic Tac Toe right in your command line!
 
-## Installation
-You can install the game globally using npm with the following command:
+## Usage
+Clone the game with
 ```sh
-npm install -g https://github.com/FRReinert/blessed-tic-tac-toe
+https://github.com/FRReinert/blessed-tic-tac-toe
 ```
 
-## Usage
-Once the game is installed, you can run it using the following command:
+Once you have the game cloned, you can run enter the folder and run the game:
 ```sh
-npx tictactoe
+cd blessed-tic-tac-toe
+npm run start
 ```
 
 ## How to Play
 The game is played on a 3x3 grid. Players take turns to place their symbol ('X' or 'O') in an empty cell. The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins the game. If all cells are filled and no player has three symbols in a row, the game ends in a draw.
 
-To make a move, simply enter the corresponding cell number when prompted using the arrow keys or vim motions \<h, j , k, l>
-
-For example, if you want to place your symbol in the center cell, you would enter 5 and press `Space`.
+To make a move, simply use the arrow keys or vim motions \<h, j , k, l> and press `Space` to place your symbol.
 
 # Dependencies
 This project relies on the following dependencies:
