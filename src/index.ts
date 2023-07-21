@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as graphics from './graphics'
 import { Game } from './game'
 
