@@ -1,4 +1,4 @@
-import { Widgets } from 'blessed'
+import type { Widgets } from 'blessed'
 
 export enum GameState {
   NotStarted = 0,
