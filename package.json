@@ -4,7 +4,7 @@
   "description": "Tic Tac Toe game for Terminal",
   "main": "index.js",
   "scripts": {
-    "preinstall": "tsc",
+    "preinstall": "npm run build",
     "build": "tsc"
   },
   "bin": {
