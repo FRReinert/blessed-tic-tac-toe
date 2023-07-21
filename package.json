@@ -13,11 +13,11 @@
   "author": "Fabricio Roberto Reinert",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^20.4.2",
     "@types/blessed": "^0.1.22",
     "blessed": "^0.1.81"
   },
   "devDependencies": {
+    "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
