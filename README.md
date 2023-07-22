@@ -1,5 +1,5 @@
 # Tic Tac Toe Terminal Game
-[![Node.js CI](https://github.com/FRReinert/blessed-tic-tac-toe/actions/workflows/node.js.yml/badge.svg)](https://github.com/FRReinert/blessed-tic-tac-toe/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/FRReinert/blessed-tic-tac-toe/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/FRReinert/blessed-tic-tac-toe/actions/workflows/node.js.yml)
 ![GitHub issues](https://img.shields.io/github/issues/FRReinert/blessed-tic-tac-toe)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/FRReinert/blessed-tic-tac-toe)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FRReinert/blessed-tic-tac-toe)
