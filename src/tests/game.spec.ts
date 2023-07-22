@@ -158,7 +158,7 @@ describe('test game methods', () => {
     game.cursorPosition = { x: 1, y: 1 }
     game.onCursorDown(bBox)
     expect(game.cursorPosition).toEqual({ x: 1, y: 2 })
-    expect(bBox.top).toEqual(27)
+    expect(bBox.top).toEqual(1)
   })
 
   it('test method onCursorDown with on the upper part of screen', () => {
@@ -169,7 +169,7 @@ describe('test game methods', () => {
     game.cursorPosition = { x: 0, y: 1 }
     game.onCursorDown(bBox)
     expect(game.cursorPosition).toEqual({ x: 0, y: 2 })
-    expect(bBox.top).toEqual(27)
+    expect(bBox.top).toEqual(1)
   })
 
   it('test method onCursorDown but it should not move', () => {
