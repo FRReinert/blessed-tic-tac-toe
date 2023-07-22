@@ -4,6 +4,7 @@
   "description": "Tic Tac Toe game for Terminal",
   "main": "dist/index.js",
   "scripts": {
+    "ci": "jest",
     "test": "jest --coverage --detectOpenHandles",
     "start": "tsc && node dist/index.js"
   },
