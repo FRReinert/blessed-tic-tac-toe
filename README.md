@@ -1,4 +1,14 @@
 # Tic Tac Toe Terminal Game
+[![Node.js CI](https://github.com/FRReinert/blessed-tic-tac-toe/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/FRReinert/blessed-tic-tac-toe/actions/workflows/node.js.yml)
+![GitHub issues](https://img.shields.io/github/issues/FRReinert/blessed-tic-tac-toe)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/FRReinert/blessed-tic-tac-toe)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/FRReinert/blessed-tic-tac-toe)
+
+
+
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+
 ![image](https://github.com/FRReinert/blessed-tic-tac-toe/assets/25513355/60b54370-d765-420e-badc-947e732a80d2)
 
 
