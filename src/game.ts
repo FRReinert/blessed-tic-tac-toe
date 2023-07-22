@@ -183,78 +183,67 @@ export class Game {
       markContainer[marker].content = SquareState.Unmarked
     }
   }
-
   checkGameStatus(): Player | undefined {
-    // first column match
-    if (
-      this.squareStates[0][0] !== SquareState.Unmarked &&
-      this.squareStates[0][0] === this.squareStates[0][1] &&
-      this.squareStates[0][1] === this.squareStates[0][2]
-    ) {
-      return getPlayerFromMark(this.squareStates[0][0])
+    const winningPatterns = [
+      // Rows
+      [
+        [0, 0],
+        [0, 1],
+        [0, 2]
+      ],
+      [
+        [1, 0],
+        [1, 1],
+        [1, 2]
+      ],
+      [
+        [2, 0],
+        [2, 1],
+        [2, 2]
+      ],
+      // Columns
+      [
+        [0, 0],
+        [1, 0],
+        [2, 0]
+      ],
+      [
+        [0, 1],
+        [1, 1],
+        [2, 1]
+      ],
+      [
+        [0, 2],
+        [1, 2],
+        [2, 2]
+      ],
+      // Diagonals
+      [
+        [0, 0],
+        [1, 1],
+        [2, 2]
+      ],
+      [
+        [0, 2],
+        [1, 1],
+        [2, 0]
+      ]
+    ]
+
+    for (const pattern of winningPatterns) {
+      const [x1, y1] = pattern[0]
+      const [x2, y2] = pattern[1]
+      const [x3, y3] = pattern[2]
+
+      if (
+        this.squareStates[x1][y1] !== SquareState.Unmarked &&
+        this.squareStates[x1][y1] === this.squareStates[x2][y2] &&
+        this.squareStates[x2][y2] === this.squareStates[x3][y3]
+      ) {
+        return getPlayerFromMark(this.squareStates[x1][y1])
+      }
     }
 
-    // second column match
-    if (
-      this.squareStates[1][0] !== SquareState.Unmarked &&
-      this.squareStates[1][0] === this.squareStates[1][1] &&
-      this.squareStates[1][1] === this.squareStates[1][2]
-    ) {
-      return getPlayerFromMark(this.squareStates[1][0])
-    }
-
-    // third column match
-    if (
-      this.squareStates[2][0] !== SquareState.Unmarked &&
-      this.squareStates[2][0] === this.squareStates[2][1] &&
-      this.squareStates[2][1] === this.squareStates[2][2]
-    ) {
-      return getPlayerFromMark(this.squareStates[2][0])
-    }
-
-    // firs row match
-    if (
-      this.squareStates[0][0] !== SquareState.Unmarked &&
-      this.squareStates[0][0] === this.squareStates[1][0] &&
-      this.squareStates[1][0] === this.squareStates[2][0]
-    ) {
-      return getPlayerFromMark(this.squareStates[0][0])
-    }
-
-    // second row match
-    if (
-      this.squareStates[0][1] !== SquareState.Unmarked &&
-      this.squareStates[0][1] === this.squareStates[1][1] &&
-      this.squareStates[1][1] === this.squareStates[2][1]
-    ) {
-      return getPlayerFromMark(this.squareStates[0][1])
-    }
-
-    // third row match
-    if (
-      this.squareStates[0][2] !== SquareState.Unmarked &&
-      this.squareStates[0][2] === this.squareStates[1][2] &&
-      this.squareStates[1][2] === this.squareStates[2][2]
-    ) {
-      return getPlayerFromMark(this.squareStates[0][2])
-    }
-
-    // cross Left Upper to Right Bottom
-    if (
-      this.squareStates[0][0] !== SquareState.Unmarked &&
-      this.squareStates[0][0] === this.squareStates[1][1] &&
-      this.squareStates[1][1] === this.squareStates[2][2]
-    ) {
-      return getPlayerFromMark(this.squareStates[0][0])
-    }
-
-    // cross Left bottom to Right upper
-    if (
-      this.squareStates[0][2] !== SquareState.Unmarked &&
-      this.squareStates[0][2] === this.squareStates[1][1] &&
-      this.squareStates[1][1] === this.squareStates[2][0]
-    ) {
-      return getPlayerFromMark(this.squareStates[0][2])
-    }
+    return undefined
   }
 }
