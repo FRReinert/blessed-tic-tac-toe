@@ -104,12 +104,8 @@ export class Game {
     }
   }
 
-  calculateTopPosition(boardHeight: number) {
-    return 1 + Math.floor((boardHeight / 3) * this.cursorPosition.y)
-  }
-
-  calculateLeftPosition(boardWidth: number) {
-    return 1 + Math.floor((boardWidth / 3) * this.cursorPosition.x)
+  calculateRelativePosition(size: number) {
+    return 1 + Math.floor((size / 3) * this.cursorPosition.y)
   }
 
   onCursorUp(selectionSquare: Widgets.BoxElement) {
@@ -117,7 +113,9 @@ export class Game {
       return
     }
     this.cursorPosition.y -= 1
-    selectionSquare.top = this.calculateTopPosition((selectionSquare.parent as Widgets.BoxElement).height as number)
+    selectionSquare.top = this.calculateRelativePosition(
+      (selectionSquare.parent as Widgets.BoxElement).height as number
+    )
   }
 
   onCursorDown(selectionSquare: Widgets.BoxElement) {
@@ -125,7 +123,9 @@ export class Game {
       return
     }
     this.cursorPosition.y += 1
-    selectionSquare.top = this.calculateTopPosition((selectionSquare.parent as Widgets.BoxElement).height as number)
+    selectionSquare.top = this.calculateRelativePosition(
+      (selectionSquare.parent as Widgets.BoxElement).height as number
+    )
   }
 
   onCursorLeft(selectionSquare: Widgets.BoxElement) {
@@ -133,7 +133,9 @@ export class Game {
       return
     }
     this.cursorPosition.x -= 1
-    selectionSquare.left = this.calculateLeftPosition((selectionSquare.parent as Widgets.BoxElement).width as number)
+    selectionSquare.left = this.calculateRelativePosition(
+      (selectionSquare.parent as Widgets.BoxElement).width as number
+    )
   }
 
   onCursorRight(selectionSquare: Widgets.BoxElement) {
@@ -141,7 +143,9 @@ export class Game {
       return
     }
     this.cursorPosition.x += 1
-    selectionSquare.left = this.calculateLeftPosition((selectionSquare.parent as Widgets.BoxElement).width as number)
+    selectionSquare.left = this.calculateRelativePosition(
+      (selectionSquare.parent as Widgets.BoxElement).width as number
+    )
   }
 
   getStateOfSquare(x: number, y: number): SquareState {
